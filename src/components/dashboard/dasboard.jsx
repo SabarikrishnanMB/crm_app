@@ -21,9 +21,9 @@ export default function Dashboard() {
     <>
       <MDBNavbar fixed="top" expand="lg" light bgColor="light">
         <MDBContainer fluid>
-          <Link to="/">
+          
             <MDBNavbarBrand color="dark">CRM User Panel </MDBNavbarBrand>
-          </Link>
+          
           <MDBNavbarToggler
             type="button"
             data-target="#navbarTogglerDemo02"
