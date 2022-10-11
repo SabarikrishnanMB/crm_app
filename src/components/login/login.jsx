@@ -35,7 +35,7 @@ export default function Login() {
     validate,
     onSubmit: async (values) => {
       try {
-        await axios.post("heroku link/login", values);
+        await axios.post("https://crm-nodejs-app.herokuapp.com/login", values);
         //localStorage.setItem("react_app_token", login.data.token);
         navigate("/dashboard");
       } catch (error) {

@@ -47,8 +47,9 @@ export default function Signup() {
     },
     validate,
     onSubmit: async (values) => {
+      console.log(values)
       try {
-         await axios.post("heruko link/signup", values);
+         await axios.post("https://crm-nodejs-app.herokuapp.com/register", values);
 // (JSON.stringify(values, null, 2));
           navigation("/");
       } catch (error) {
