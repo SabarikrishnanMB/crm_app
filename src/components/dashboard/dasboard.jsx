@@ -38,11 +38,11 @@ export default function Dashboard() {
             <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
               {/* sidebar */}
               <div className="sidebar position-absolute top-0 start-0">
-                <Link to="/">
+                
                   <MDBNavbarBrand className="p-3" color="dark">
                     CRM User Panel
                   </MDBNavbarBrand>
-                </Link>
+              
                 <div className="sidebutton p-3 gap-5">
                   <Link to="/dashboard">
                     <MDBBtn className="sidebtn">
