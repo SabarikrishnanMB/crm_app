@@ -49,7 +49,7 @@ export default function Servicereq() {
     validate,
     onSubmit: async (values) => {
       try {
-         await axios.post("https://crm-nodejs-app.herokuapp.com/servicereq", values);
+         await axios.post("https://crm-nodejs.vercel.app/servicereq", values);
 // (JSON.stringify(values, null, 2));
           navigation("/dashboard");
       } catch (error) {

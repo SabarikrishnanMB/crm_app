@@ -49,7 +49,7 @@ export default function Signup() {
     onSubmit: async (values) => {
       console.log(values)
       try {
-         await axios.post("https://crm-nodejs-app.herokuapp.com/register", values);
+         await axios.post("https://crm-nodejs.vercel.app/register", values);
 // (JSON.stringify(values, null, 2));
           navigation("/");
       } catch (error) {
