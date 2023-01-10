@@ -13,6 +13,7 @@ import {
   MDBBtn,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import { env } from "../../config";
 
 const validate = values => {
   const errors = {};
@@ -49,7 +50,7 @@ export default function Signup() {
     onSubmit: async (values) => {
       console.log(values)
       try {
-         await axios.post("https://crmnode.onrender.com/register", values);
+         await axios.post(`${env.api}/register`, values);
 // (JSON.stringify(values, null, 2));
           navigation("/");
       } catch (error) {

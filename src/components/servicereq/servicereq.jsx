@@ -13,6 +13,7 @@ import {
   MDBBtn,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import { env } from "../../config";
 
 const validate = values => {
   const errors = {};
@@ -49,7 +50,7 @@ export default function Servicereq() {
     validate,
     onSubmit: async (values) => {
       try {
-         await axios.post("https://crm-nodejs.vercel.app/servicereq", values);
+         await axios.post(`${env.api}/servicereq`, values);
 // (JSON.stringify(values, null, 2));
           navigation("/dashboard");
       } catch (error) {

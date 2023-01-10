@@ -13,6 +13,7 @@ import {
   MDBBtn,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import { env } from "../../config";
 // validation
 const validate = (values) => {
   const errors = {};
@@ -35,7 +36,7 @@ export default function Login() {
     validate,
     onSubmit: async (values) => {
       try {
-        await axios.post("https://crm-nodejs.vercel.app/login", values);
+        await axios.post(`${env.api}/login`, values);
         //localStorage.setItem("react_app_token", login.data.token);
         navigate("/dashboard");
       } catch (error) {
