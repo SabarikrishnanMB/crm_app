@@ -1,3 +1,3 @@
 export const env = {
-  api: "",
+  api: "https://crmnode.onrender.com",
 };
