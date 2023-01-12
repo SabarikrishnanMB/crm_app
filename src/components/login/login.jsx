@@ -26,11 +26,11 @@ const validate = (values) => {
 };
 // values
 export default function Login() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
-      password: ""
+      password: "",
     },
 
     validate,
@@ -59,11 +59,19 @@ export default function Login() {
             onChange={formik.handleChange}
             value={formik.values.email}
           />
-          {formik.errors.email ? <div style={{ color: "red" }}>{formik.errors.email}</div> : null}
+          {formik.errors.email ? (
+            <div style={{ color: "red" }}>{formik.errors.email}</div>
+          ) : null}
           {/* password */}
-          <MDBInput className="mb-4" type="password" label="Password" Name="password" onChange={formik.handleChange}
-            value={formik.values.password}/>
-            {/* submit button */}
+          <MDBInput
+            className="mb-4"
+            type="password"
+            label="Password"
+            Name="password"
+            onChange={formik.handleChange}
+            value={formik.values.password}
+          />
+          {/* submit button */}
           <MDBBtn type={"submit"} value="Submit" className="mb-4" block>
             Sign in
           </MDBBtn>
@@ -71,6 +79,12 @@ export default function Login() {
             <p>
               Not a member? <Link to="/signup">Register User</Link>
             </p>
+          </div>
+          <div className="text-center">
+            <strong>For Testing</strong>
+            <br />
+            <h6>Email: test@gmail.com</h6>
+            <h6>Password: test@123</h6>
           </div>
         </form>
       </div>
